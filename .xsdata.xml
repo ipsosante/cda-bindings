@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config xmlns="http://pypi.org/project/xsdata" version="22.5">
+  <Output maxLineLength="79">
+    <Package>cda</Package>
+    <Format repr="true" eq="true" order="false" unsafeHash="false" frozen="false" slots="false" kwOnly="false">dataclasses</Format>
+    <Structure>namespace-clusters</Structure>
+    <DocstringStyle>reStructuredText</DocstringStyle>
+    <RelativeImports>false</RelativeImports>
+    <CompoundFields defaultName="choice" forceDefaultName="false">false</CompoundFields>
+    <PostponedAnnotations>false</PostponedAnnotations>
+    <UnnestClasses>false</UnnestClasses>
+  </Output>
+  <Conventions>
+    <ClassName case="pascalCase" safePrefix="type"/>
+    <FieldName case="snakeCase" safePrefix="value"/>
+    <ConstantName case="screamingSnakeCase" safePrefix="value"/>
+    <ModuleName case="snakeCase" safePrefix="mod"/>
+    <PackageName case="snakeCase" safePrefix="pkg"/>
+  </Conventions>
+  <Substitutions>
+    <Substitution type="class" search="^Cs$" replace="CS"/>
+    <Substitution type="class" search="^Cv$" replace="CV"/>
+    <Substitution type="class" search="^Ce$" replace="CE"/>
+    <Substitution type="class" search="^Cd$" replace="CD"/>
+    <Substitution type="class" search="^Ts$" replace="TS"/>
+    <Substitution type="class" search="^Ii$" replace="II"/>
+    <Substitution type="class" search="^St$" replace="ST"/>
+    <Substitution type="class" search="^Ed$" replace="ED"/>
+    <Substitution type="class" search="^Pn$" replace="PN"/>
+    <Substitution type="class" search="^Ep$" replace="EP"/>
+    <Substitution type="class" search="^PocdMt000040" replace=""/>
+    <Substitution type="module" search="^pocd_mt000040_" replace=""/>
+  </Substitutions>
+</Config>
