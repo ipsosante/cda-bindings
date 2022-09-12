@@ -38,7 +38,7 @@ patch -p1 < /path/to/cda-bindings/POCD_MT000040_extensions.patch
 Come back to the `cda-bindings` directory, then run :
 
 ```sh
-rm -rf ./cda; xsdata generate --config .xsdata.xml /path/to/ansforge/TestContenuCDA/infrastructure/cda/CDA_extended.xsd
+rm -rf ./cdabindings; xsdata generate --config .xsdata.xml /path/to/ansforge/TestContenuCDA/infrastructure/cda/CDA_extended.xsd
 ```
 
 ## Validating the generated XML files with the XSD
