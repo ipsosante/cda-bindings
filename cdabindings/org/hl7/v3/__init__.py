@@ -237,6 +237,7 @@ from cdabindings.org.hl7.v3.slist_ts import SlistTs
 from cdabindings.org.hl7.v3.specimen import Specimen
 from cdabindings.org.hl7.v3.specimen_role import SpecimenRole
 from cdabindings.org.hl7.v3.st import ST
+from cdabindings.org.hl7.v3.struc_doc_br import StrucDocBr
 from cdabindings.org.hl7.v3.struc_doc_caption import (
     StrucDocCaption,
     StrucDocContent,
@@ -563,6 +564,7 @@ __all__ = [
     "Specimen",
     "SpecimenRole",
     "ST",
+    "StrucDocBr",
     "StrucDocCaption",
     "StrucDocContent",
     "StrucDocFootnote",

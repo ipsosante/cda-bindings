@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type
+from cdabindings.org.hl7.v3.struc_doc_br import StrucDocBr
 from cdabindings.org.hl7.v3.struc_doc_footnote_ref import StrucDocFootnoteRef
 from cdabindings.org.hl7.v3.struc_doc_sub import StrucDocSub
 from cdabindings.org.hl7.v3.struc_doc_sup import StrucDocSup
@@ -57,9 +58,8 @@ class StrucDocTitleFootnote:
                 },
                 {
                     "name": "br",
-                    "type": str,
+                    "type": StrucDocBr,
                     "namespace": "urn:hl7-org:v3",
-                    "max_length": 0,
                 },
             ),
         }
@@ -116,9 +116,8 @@ class StrucDocTitleContent:
                 },
                 {
                     "name": "br",
-                    "type": str,
+                    "type": StrucDocBr,
                     "namespace": "urn:hl7-org:v3",
-                    "max_length": 0,
                 },
                 {
                     "name": "footnote",

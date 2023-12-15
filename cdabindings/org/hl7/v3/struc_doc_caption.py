@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type
+from cdabindings.org.hl7.v3.struc_doc_br import StrucDocBr
 from cdabindings.org.hl7.v3.struc_doc_col import StrucDocCol
 from cdabindings.org.hl7.v3.struc_doc_colgroup import StrucDocColgroup
 from cdabindings.org.hl7.v3.struc_doc_content_revised import StrucDocContentRevised
@@ -194,9 +195,8 @@ class StrucDocParagraph:
                 },
                 {
                     "name": "br",
-                    "type": str,
+                    "type": StrucDocBr,
                     "namespace": "urn:hl7-org:v3",
-                    "max_length": 0,
                 },
                 {
                     "name": "footnote",
@@ -334,9 +334,8 @@ class StrucDocTh:
                 },
                 {
                     "name": "br",
-                    "type": str,
+                    "type": StrucDocBr,
                     "namespace": "urn:hl7-org:v3",
-                    "max_length": 0,
                 },
                 {
                     "name": "footnote",
@@ -474,9 +473,8 @@ class StrucDocTd:
                 },
                 {
                     "name": "br",
-                    "type": str,
+                    "type": StrucDocBr,
                     "namespace": "urn:hl7-org:v3",
-                    "max_length": 0,
                 },
                 {
                     "name": "footnote",
@@ -927,9 +925,8 @@ class StrucDocItem:
                 },
                 {
                     "name": "br",
-                    "type": str,
+                    "type": StrucDocBr,
                     "namespace": "urn:hl7-org:v3",
-                    "max_length": 0,
                 },
                 {
                     "name": "footnote",
@@ -1071,9 +1068,8 @@ class StrucDocFootnote:
                 },
                 {
                     "name": "br",
-                    "type": str,
+                    "type": StrucDocBr,
                     "namespace": "urn:hl7-org:v3",
-                    "max_length": 0,
                 },
                 {
                     "name": "renderMultiMedia",
@@ -1239,9 +1235,8 @@ class StrucDocContent:
                 },
                 {
                     "name": "br",
-                    "type": str,
+                    "type": StrucDocBr,
                     "namespace": "urn:hl7-org:v3",
-                    "max_length": 0,
                 },
                 {
                     "name": "footnote",

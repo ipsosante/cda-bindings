@@ -28,11 +28,12 @@ Then you'll need to clone [https://github.com/ansforge/TestContenuCDA.git](https
 git clone https://github.com/ansforge/TestContenuCDA.git
 ```
 
-And patch it with `POCD_MT000040_extensions.patch` so it can be digested by xsdata :
+And patch it with `POCD_MT000040_extensions.patch` and `NarrativeBlock.patch` :
 
 ```sh
 cd /path/to/ansforge/TestContenuCDA
 patch -p1 < /path/to/cda-bindings/POCD_MT000040_extensions.patch
+patch -p1 < /path/to/cda-bindings/NarrativeBlock.patch
 ```
 
 Come back to the `cda-bindings` directory, then run :
