@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Config xmlns="http://pypi.org/project/xsdata" version="22.5">
-  <Output maxLineLength="79">
+<Config xmlns="http://pypi.org/project/xsdata" version="24.5">
+  <Output maxLineLength="79" subscriptableTypes="true">
     <Package>cdabindings</Package>
     <Format repr="true" eq="true" order="false" unsafeHash="false" frozen="false" slots="false" kwOnly="false">dataclasses</Format>
-    <Structure>namespace-clusters</Structure>
+    <Structure>clusters</Structure>
     <DocstringStyle>reStructuredText</DocstringStyle>
     <RelativeImports>false</RelativeImports>
     <CompoundFields defaultName="choice" forceDefaultName="false">false</CompoundFields>

@@ -22,24 +22,16 @@ pip install -r requirements.txt
 
 Start by creating a Python virtualenv, and install the dependencies using the root `requirements.txt`.
 
-Then you'll need to clone [https://github.com/ansforge/TestContenuCDA.git](https://github.com/ansforge/TestContenuCDA) somewhere.
+Then you'll need to clone [https://github.com/ansforge/TestContenuCDA-3-0](https://github.com/ansforge/TestContenuCDA-3-0) somewhere.
 
 ```sh
-git clone https://github.com/ansforge/TestContenuCDA.git
-```
-
-And patch it with `POCD_MT000040_extensions.patch` and `NarrativeBlock.patch` :
-
-```sh
-cd /path/to/ansforge/TestContenuCDA
-patch -p1 < /path/to/cda-bindings/POCD_MT000040_extensions.patch
-patch -p1 < /path/to/cda-bindings/NarrativeBlock.patch
+git clone https://github.com/ansforge/TestContenuCDA-3-0.git
 ```
 
 Come back to the `cda-bindings` directory, then run :
 
 ```sh
-rm -rf ./cdabindings; xsdata generate --config .xsdata.xml /path/to/ansforge/TestContenuCDA/infrastructure/cda/CDA_extended.xsd
+rm -rf ./cdabindings; xsdata generate --debug --config .xsdata.xml /path/to/ansforge/TestContenuCDA-3-0/infrastructure/cda/CDA_extended.xsd
 ```
 
 ## Validating the generated XML files with the XSD

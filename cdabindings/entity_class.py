@@ -1,0 +1,33 @@
+from enum import Enum
+
+__NAMESPACE__ = "urn:hl7-org:v3"
+
+
+class EntityClass(Enum):
+    ANM = "ANM"
+    CER = "CER"
+    CHEM = "CHEM"
+    CITY = "CITY"
+    CONT = "CONT"
+    COUNTRY = "COUNTRY"
+    COUNTY = "COUNTY"
+    DEV = "DEV"
+    ENT = "ENT"
+    FOOD = "FOOD"
+    HCE = "HCE"
+    HOLD = "HOLD"
+    LIV = "LIV"
+    MAT = "MAT"
+    MIC = "MIC"
+    MMAT = "MMAT"
+    MODDV = "MODDV"
+    NAT = "NAT"
+    NLIV = "NLIV"
+    ORG = "ORG"
+    PLC = "PLC"
+    PLNT = "PLNT"
+    PROVINCE = "PROVINCE"
+    PSN = "PSN"
+    PUB = "PUB"
+    RGRP = "RGRP"
+    STATE = "STATE"
