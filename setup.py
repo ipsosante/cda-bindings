@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="cda-bindings",
-    version="0.2.0",
+    version="0.2.1",
     author="ipso santé",
     author_email="contact@ipsosante.fr",
     description="Python bindings for the CDA R2 document format",

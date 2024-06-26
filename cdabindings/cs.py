@@ -13,22 +13,23 @@ class CS(CV):
 
     Used when a single code value must be sent.
 
-    :ivar translation:
     :ivar original_text: The text or phrase used as the basis for the
         coding.
+    :ivar translation: A set of other concept descriptors that translate
+        this concept descriptor into other code systems.
     :ivar code_system:
     :ivar code_system_name:
     :ivar code_system_version:
     :ivar display_name:
     """
 
-    translation: Any = field(
+    original_text: Any = field(
         init=False,
         metadata={
             "type": "Ignore",
         },
     )
-    original_text: Any = field(
+    translation: Any = field(
         init=False,
         metadata={
             "type": "Ignore",

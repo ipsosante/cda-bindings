@@ -1,7 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any
+from dataclasses import dataclass
 
-from cdabindings.cd import CD
 from cdabindings.ce import CE
 
 __NAMESPACE__ = "urn:hl7-org:v3"
@@ -14,10 +12,3 @@ class CV(CE):
 
     Used when a single code value must be sent.
     """
-
-    translation: Any = field(
-        init=False,
-        metadata={
-            "type": "Ignore",
-        },
-    )

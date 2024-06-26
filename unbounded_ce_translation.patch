@@ -1,0 +1,13 @@
+diff --git a/infrastructure/cda/general/datatypes-base.xsd b/infrastructure/cda/general/datatypes-base.xsd
+index 14ce871b..9210ec46 100644
+--- a/infrastructure/cda/general/datatypes-base.xsd
++++ b/infrastructure/cda/general/datatypes-base.xsd
+@@ -514,7 +514,7 @@
+                      </xs:documentation>
+                   </xs:annotation>
+                </xs:element>
+-               <xs:element name="translation" type="CD" minOccurs="0" maxOccurs="0"/>
++               <xs:element name="translation" type="CD" minOccurs="0" maxOccurs="unbounded"/>
+             </xs:sequence>
+             <xs:attribute name="code" type="cs" use="optional">
+                <xs:annotation>
