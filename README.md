@@ -15,7 +15,7 @@ git+https://github.com/ipsosante/cda-bindings.git
 And then
 
 ```
-pip install -r requirements.txt
+pip install .[cli]
 ```
 
 ## Re-generating the bindings

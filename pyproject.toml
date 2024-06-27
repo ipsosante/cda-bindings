@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cdabindings"
+version = "0.2.2"
+authors = [
+  { name="Guillaume Algis", email="guillaume.algis@ipsosante.fr" },
+]
+description = "Python bindings for the CDA R2 document format"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+dependencies = [
+    "xsdata == 24.6",
+]
+
+[project.optional-dependencies]
+cli = [
+    "xsdata[cli] == 24.6",
+]
+
+[tool.setuptools]
+packages = ['cdabindings']
+
+[project.urls]
+"Homepage" = "https://github.com/ipsosante/cda-bindings"
+"Bug Tracker" = "https://github.com/ipsosante/cda-bindings/issues"
