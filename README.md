@@ -46,7 +46,7 @@ cd xsd-validator
 
 ## Patches
 
-### `remove_cd_qualifier.patch`
+### `patches/xsd/remove_cd_qualifier.patch`
 
 Removes the `qualifier` property from de `CD` element (instead of declaring it with `maxOccurs="0"`). It is not supported by the spec :
 
@@ -54,26 +54,12 @@ Removes the `qualifier` property from de `CD` element (instead of declaring it w
 > [...]
 > l'élément qualifier n'est pas utilisé car non supporté par la version ultérieure des types de données HL7 V3;
 
-### `unbounded_ce_translation.patch`
+### `patches/xsd/remove_cd_qualifier.patch`
 
 Make the `maxOccurs` property of the `translation` attributes of the `CE` element `unbounded` intead of `0`.
 
-I've seen no reason if the spec to limit the usage of `translation` at the `CE` level. It also makes the generated `CE` class unusable because xsdata will generate a dataclass with a `translation` field with `init=False`. Because this field is also inherited, this makes the child class impossible to init.
+I've seen no reason if the spec to limit the usage of `translation` at the `CE` level. It also makes the generated `CV` class unusable because xsdata will generate a dataclass with a `translation` field with `init=False`.
 
-Simple example to demonstrate the issue:
+### `patches/generated_code/cs_init.patch`
 
-```py
-from dataclasses import dataclass, field
-
-@dataclass
-class A:
-    translation: str
-
-@dataclass
-class B(A):
-    translation: str = field(init=False)
-
->>> A(translation="hello, world") # OK
->>> B()
-AttributeError: 'B' object has no attribute 'translation'
-```
+This is related to the patch `patches/xsd/remove_cd_qualifier.patch`. To make the generated `CS` class initializable, we need to manually declare its initializer to work around most of its field being re-declared with `init=False`.

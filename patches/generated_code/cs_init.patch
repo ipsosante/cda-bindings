@@ -1,0 +1,19 @@
+diff --git a/cdabindings/cs.py b/cdabindings/cs.py
+index 9b4ba14..8070b1f 100644
+--- a/cdabindings/cs.py
++++ b/cdabindings/cs.py
+@@ -1,5 +1,5 @@
+ from dataclasses import dataclass, field
+-from typing import Any
++from typing import Any, Optional
+ 
+ from cdabindings.cv import CV
+ 
+@@ -58,3 +58,7 @@ class CS(CV):
+             "type": "Ignore",
+         },
+     )
++
++    def __init__(self, code: Optional[str] = None):
++        super().__init__(code=code)
++        self.code = code

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Any
+from typing import Any, Optional
 
 from cdabindings.cv import CV
 
@@ -59,3 +59,7 @@ class CS(CV):
             "type": "Ignore",
         },
     )
+
+    def __init__(self, code: Optional[str] = None):
+        super().__init__(code=code)
+        self.code = code

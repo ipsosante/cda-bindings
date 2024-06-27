@@ -1,30 +1,27 @@
 diff --git a/infrastructure/cda/general/datatypes-base.xsd b/infrastructure/cda/general/datatypes-base.xsd
-index 14ce871b..8311dde2 100644
+index 14ce871b..34baf17d 100644
 --- a/infrastructure/cda/general/datatypes-base.xsd
 +++ b/infrastructure/cda/general/datatypes-base.xsd
-@@ -363,14 +363,14 @@
+@@ -363,14 +363,6 @@
                       </xs:documentation>
                    </xs:annotation>
                 </xs:element>
 -               <xs:element name="qualifier" type="CR" minOccurs="0" maxOccurs="unbounded">
-+               <!-- <xs:element name="qualifier" type="CR" minOccurs="0" maxOccurs="unbounded">
-                   <xs:annotation>
-                      <xs:documentation>
-                         Specifies additional codes that increase the
-                         specificity of the primary code.
-                      </xs:documentation>
-                   </xs:annotation>
+-                  <xs:annotation>
+-                     <xs:documentation>
+-                        Specifies additional codes that increase the
+-                        specificity of the primary code.
+-                     </xs:documentation>
+-                  </xs:annotation>
 -               </xs:element>
-+               </xs:element> -->
                 <xs:element name="translation" type="CD" minOccurs="0" maxOccurs="unbounded">
                    <xs:annotation>
                       <xs:documentation>
-@@ -445,7 +445,7 @@
+@@ -445,7 +437,6 @@
                       </xs:documentation>
                    </xs:annotation>
                 </xs:element>
 -               <xs:element name="qualifier" type="CR" minOccurs="0" maxOccurs="0"/>
-+               <!-- <xs:element name="qualifier" type="CR" minOccurs="0" maxOccurs="0"/> -->
                 <xs:element name="translation" type="CD" minOccurs="0" maxOccurs="unbounded">
                    <xs:annotation>
                       <xs:documentation>
