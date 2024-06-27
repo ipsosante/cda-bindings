@@ -28,21 +28,13 @@ Then you'll need to clone [https://github.com/ansforge/TestContenuCDA-3-0](https
 git clone https://github.com/ansforge/TestContenuCDA-3-0.git
 ```
 
-And patch it with all `.patch` files found at the top level of this repository :
-
-```sh
-cd /path/to/ansforge/TestContenuCDA
-patch -p1 < /path/to/cda-bindings/remove_cd_qualifier.patch
-patch -p1 < /path/to/cda-bindings/unbounded_ce_translation.patch
-```
-
-(See the "Patches" section for more info).
-
 Come back to the `cda-bindings` directory, then run :
 
 ```sh
-rm -rf ./cdabindings; xsdata generate --debug --config .xsdata.xml /path/to/ansforge/TestContenuCDA-3-0/infrastructure/cda/CDA_extended.xsd
+./regen.sh
 ```
+
+This will regenerate the full bindings in `./cdabindings`.
 
 ## Validating the generated XML files with the XSD
 
