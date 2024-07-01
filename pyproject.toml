@@ -24,6 +24,9 @@ cli = [
 [tool.setuptools]
 packages = ['cdabindings']
 
+[tool.setuptools.package-data]
+cdabindings = ["py.typed"]
+
 [project.urls]
 "Homepage" = "https://github.com/ipsosante/cda-bindings"
 "Bug Tracker" = "https://github.com/ipsosante/cda-bindings/issues"
