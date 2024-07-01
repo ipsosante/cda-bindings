@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "cdabindings"
-version = "0.2.2"
+version = "0.2.3"
 authors = [
   { name="Guillaume Algis", email="guillaume.algis@ipsosante.fr" },
 ]
@@ -23,6 +23,9 @@ cli = [
 
 [tool.setuptools]
 packages = ['cdabindings']
+
+[tool.setuptools.package-data]
+cdabindings = ["py.typed"]
 
 [project.urls]
 "Homepage" = "https://github.com/ipsosante/cda-bindings"
