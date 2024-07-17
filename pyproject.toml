@@ -13,12 +13,12 @@ readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.9"
 dependencies = [
-    "xsdata == 24.6",
+    "xsdata == 24.6.1",
 ]
 
 [project.optional-dependencies]
 cli = [
-    "xsdata[cli] == 24.6",
+    "xsdata[cli]",
 ]
 
 [tool.setuptools]
