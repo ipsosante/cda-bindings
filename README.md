@@ -12,15 +12,14 @@ Add the following to your requirements.txt file :
 git+https://github.com/ipsosante/cda-bindings.git
 ```
 
-And then
+## Re-generating the bindings
+
+Start by creating a Python virtualenv, and install the dependencies:
+
 
 ```
 pip install .[cli]
 ```
-
-## Re-generating the bindings
-
-Start by creating a Python virtualenv, and install the dependencies using the root `requirements.txt`.
 
 Then you'll need to clone [https://github.com/ansforge/TestContenuCDA-3-0](https://github.com/ansforge/TestContenuCDA-3-0) somewhere.
 
@@ -31,7 +30,7 @@ git clone https://github.com/ansforge/TestContenuCDA-3-0.git
 Come back to the `cda-bindings` directory, then run :
 
 ```sh
-./regen.sh
+./regen.sh /path/to/ansforge/TestContenuCDA-3-0
 ```
 
 This will regenerate the full bindings in `./cdabindings`.
@@ -41,7 +40,7 @@ This will regenerate the full bindings in `./cdabindings`.
 ```sh
 git clone https://github.com/amouat/xsd-validator
 cd xsd-validator
-./xsdv.sh /path/to/ansforge/TestContenuCDA/infrastructure/cda/CDA_extended.xsd /path/to/generated/vsm_doc.xml
+./xsdv.sh /path/to/ansforge/TestContenuCDA-3-0/infrastructure/cda/CDA_extended.xsd /path/to/generated/vsm_doc.xml
 ```
 
 ## Patches
