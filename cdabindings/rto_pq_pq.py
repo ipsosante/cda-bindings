@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
-from cdabindings.pq import Pq
+from cdabindings.pq import PQ
 from cdabindings.qty import Qty
 
 __NAMESPACE__ = "urn:hl7-org:v3"
@@ -20,7 +20,7 @@ class RtoPqPq(Qty):
     class Meta:
         name = "RTO_PQ_PQ"
 
-    numerator: Optional[Pq] = field(
+    numerator: Optional[PQ] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -28,7 +28,7 @@ class RtoPqPq(Qty):
             "required": True,
         },
     )
-    denominator: Optional[Pq] = field(
+    denominator: Optional[PQ] = field(
         default=None,
         metadata={
             "type": "Element",

@@ -11,7 +11,7 @@ from cdabindings.ii import II
 from cdabindings.infrastructure_root_type_id import InfrastructureRootTypeId
 from cdabindings.null_flavor import NullFlavor
 from cdabindings.pn import PN
-from cdabindings.pq import Pq
+from cdabindings.pq import PQ
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 
@@ -52,7 +52,7 @@ class PlayingEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    quantity: list[Pq] = field(
+    quantity: list[PQ] = field(
         default_factory=list,
         metadata={
             "type": "Element",

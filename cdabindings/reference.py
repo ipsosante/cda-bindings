@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
-from cdabindings.bl import Bl
+from cdabindings.bl import BL
 from cdabindings.cs import CS
 from cdabindings.external_act import ExternalAct
 from cdabindings.external_document import ExternalDocument
@@ -46,7 +46,7 @@ class Reference:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    seperatable_ind: Optional[Bl] = field(
+    seperatable_ind: Optional[BL] = field(
         default=None,
         metadata={
             "name": "seperatableInd",

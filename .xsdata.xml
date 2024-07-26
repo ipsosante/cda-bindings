@@ -28,6 +28,9 @@
     <Substitution type="class" search="^Ed$" replace="ED"/>
     <Substitution type="class" search="^Pn$" replace="PN"/>
     <Substitution type="class" search="^Ep$" replace="EP"/>
+    <Substitution type="class" search="^Pq$" replace="PQ"/>
+    <Substitution type="class" search="^Pqr$" replace="PQR"/>
+    <Substitution type="class" search="^Bl$" replace="BL"/>
     <Substitution type="class" search="^PocdMt000040" replace=""/>
     <Substitution type="module" search="^pocd_mt000040_" replace=""/>
   </Substitutions>

@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from typing import Optional
 
 from cdabindings.any_abstract import AnyAbstract
-from cdabindings.pq import Pq
+from cdabindings.pq import PQ
 from cdabindings.ts import TS
 
 __NAMESPACE__ = "urn:hl7-org:v3"
@@ -41,7 +41,7 @@ class GlistTs(AnyAbstract):
             "required": True,
         },
     )
-    increment: Optional[Pq] = field(
+    increment: Optional[PQ] = field(
         default=None,
         metadata={
             "type": "Element",

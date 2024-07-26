@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
-from cdabindings.bl import Bl
+from cdabindings.bl import BL
 from cdabindings.ce import CE
 from cdabindings.cs import CS
 from cdabindings.ii import II
@@ -64,7 +64,7 @@ class LanguageCommunication:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    preference_ind: Optional[Bl] = field(
+    preference_ind: Optional[BL] = field(
         default=None,
         metadata={
             "name": "preferenceInd",

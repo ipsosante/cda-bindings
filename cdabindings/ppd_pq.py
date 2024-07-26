@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
-from cdabindings.pq import Pq
+from cdabindings.pq import PQ
 from cdabindings.probability_distribution_type import (
     ProbabilityDistributionType,
 )
@@ -10,7 +10,7 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 
 @dataclass
-class PpdPq(Pq):
+class PpdPq(PQ):
     """
     :ivar standard_deviation: The primary measure of
         variance/uncertainty of the value (the square root of the sum of
@@ -29,7 +29,7 @@ class PpdPq(Pq):
     class Meta:
         name = "PPD_PQ"
 
-    standard_deviation: Optional[Pq] = field(
+    standard_deviation: Optional[PQ] = field(
         default=None,
         metadata={
             "name": "standardDeviation",

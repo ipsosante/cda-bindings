@@ -3,7 +3,7 @@ from typing import Optional
 
 from cdabindings.calendar_cycle import CalendarCycle
 from cdabindings.ivl_ts import IvlTs
-from cdabindings.pq import Pq
+from cdabindings.pq import PQ
 from cdabindings.sxcm_ts import SxcmTs
 
 __NAMESPACE__ = "urn:hl7-org:v3"
@@ -45,7 +45,7 @@ class PivlTs(SxcmTs):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    period: Optional[Pq] = field(
+    period: Optional[PQ] = field(
         default=None,
         metadata={
             "type": "Element",

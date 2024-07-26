@@ -7,15 +7,12 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 
 @dataclass
-class Bl(AnyAbstract):
+class BL(AnyAbstract):
     """The Boolean type stands for the values of two-valued logic.
 
     A Boolean value can be either true or false, or, as any other value
     may be NULL.
     """
-
-    class Meta:
-        name = "BL"
 
     value: Optional[str] = field(
         default=None,

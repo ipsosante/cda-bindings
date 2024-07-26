@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
-from cdabindings.pq import Pq
+from cdabindings.pq import PQ
 from cdabindings.probability_distribution_type import (
     ProbabilityDistributionType,
 )
@@ -30,7 +30,7 @@ class PpdTs(TS):
     class Meta:
         name = "PPD_TS"
 
-    standard_deviation: Optional[Pq] = field(
+    standard_deviation: Optional[PQ] = field(
         default=None,
         metadata={
             "name": "standardDeviation",

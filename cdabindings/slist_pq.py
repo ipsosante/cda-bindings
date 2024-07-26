@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from typing import Optional
 
 from cdabindings.any_abstract import AnyAbstract
-from cdabindings.pq import Pq
+from cdabindings.pq import PQ
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 
@@ -22,7 +22,7 @@ class SlistPq(AnyAbstract):
     class Meta:
         name = "SLIST_PQ"
 
-    origin: Optional[Pq] = field(
+    origin: Optional[PQ] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -30,7 +30,7 @@ class SlistPq(AnyAbstract):
             "required": True,
         },
     )
-    scale: Optional[Pq] = field(
+    scale: Optional[PQ] = field(
         default=None,
         metadata={
             "type": "Element",

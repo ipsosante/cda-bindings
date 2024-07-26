@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from typing import Optional
 
 from cdabindings.any_abstract import AnyAbstract
-from cdabindings.pq import Pq
+from cdabindings.pq import PQ
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 
@@ -32,7 +32,7 @@ class GlistPq(AnyAbstract):
     class Meta:
         name = "GLIST_PQ"
 
-    head: Optional[Pq] = field(
+    head: Optional[PQ] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -40,7 +40,7 @@ class GlistPq(AnyAbstract):
             "required": True,
         },
     )
-    increment: Optional[Pq] = field(
+    increment: Optional[PQ] = field(
         default=None,
         metadata={
             "type": "Element",

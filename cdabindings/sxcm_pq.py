@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 
-from cdabindings.pq import Pq
+from cdabindings.pq import PQ
 from cdabindings.set_operator import SetOperator
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
 @dataclass
-class SxcmPq(Pq):
+class SxcmPq(PQ):
     """
     :ivar operator: A code specifying whether the set component is
         included (union) or excluded (set-difference) from the set, or

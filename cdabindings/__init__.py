@@ -111,7 +111,7 @@ from cdabindings.bin import Bin
 from cdabindings.binary_data_encoding import BinaryDataEncoding
 from cdabindings.birth_time import BirthTime
 from cdabindings.birthplace import Birthplace
-from cdabindings.bl import Bl
+from cdabindings.bl import BL
 from cdabindings.block_set import BlockSet
 from cdabindings.bn import Bn
 from cdabindings.bxit_cd import BxitCd
@@ -442,8 +442,8 @@ from cdabindings.pn import PN
 from cdabindings.postal_address_use import PostalAddressUse
 from cdabindings.ppd_pq import PpdPq
 from cdabindings.ppd_ts import PpdTs
-from cdabindings.pq import Pq
-from cdabindings.pqr import Pqr
+from cdabindings.pq import PQ
+from cdabindings.pqr import PQR
 from cdabindings.precondition import (
     Precondition,
 )
@@ -751,7 +751,7 @@ __all__ = [
     "BinaryDataEncoding",
     "BirthTime",
     "Birthplace",
-    "Bl",
+    "BL",
     "BlockSet",
     "Bn",
     "BxitCd",
@@ -1038,8 +1038,8 @@ __all__ = [
     "PostalAddressUse",
     "PpdPq",
     "PpdTs",
-    "Pq",
-    "Pqr",
+    "PQ",
+    "PQR",
     "Precondition",
     "Precondition",
     "Precondition1",

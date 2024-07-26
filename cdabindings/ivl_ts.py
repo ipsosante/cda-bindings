@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from typing import Optional
 
 from cdabindings.ivxb_ts import IvxbTs
-from cdabindings.pq import Pq
+from cdabindings.pq import PQ
 from cdabindings.sxcm_ts import SxcmTs
 from cdabindings.ts import TS
 
@@ -35,7 +35,7 @@ class IvlTs(SxcmTs):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    width: list[Pq] = field(
+    width: list[PQ] = field(
         default_factory=list,
         metadata={
             "type": "Element",

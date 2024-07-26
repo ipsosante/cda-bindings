@@ -2,14 +2,14 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional, Union
 
-from cdabindings.pqr import Pqr
+from cdabindings.pqr import PQR
 from cdabindings.qty import Qty
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
 @dataclass
-class Pq(Qty):
+class PQ(Qty):
     """
     A dimensioned quantity expressing the result of a measurement act.
 
@@ -22,10 +22,7 @@ class Pq(Qty):
         Units of Measure (UCUM) [http://aurora.rg.iupui.edu/UCUM].
     """
 
-    class Meta:
-        name = "PQ"
-
-    translation: list[Pqr] = field(
+    translation: list[PQR] = field(
         default_factory=list,
         metadata={
             "type": "Element",

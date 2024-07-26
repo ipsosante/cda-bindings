@@ -10,7 +10,7 @@ from cdabindings.act_relationship_has_component import (
 )
 from cdabindings.any_abstract import AnyAbstract
 from cdabindings.author import Author
-from cdabindings.bl import Bl
+from cdabindings.bl import BL
 from cdabindings.cd import CD
 from cdabindings.ce import CE
 from cdabindings.consumable import Consumable
@@ -28,7 +28,7 @@ from cdabindings.ivl_ts import IvlTs
 from cdabindings.null_flavor import NullFlavor
 from cdabindings.participant2 import Participant2
 from cdabindings.performer2 import Performer2
-from cdabindings.pq import Pq
+from cdabindings.pq import PQ
 from cdabindings.precondition import Precondition
 from cdabindings.priority_number import PriorityNumber
 from cdabindings.product import Product
@@ -465,7 +465,7 @@ class Component4:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    seperatable_ind: Optional[Bl] = field(
+    seperatable_ind: Optional[BL] = field(
         default=None,
         metadata={
             "name": "seperatableInd",
@@ -765,7 +765,7 @@ class EntryRelationship:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    seperatable_ind: Optional[Bl] = field(
+    seperatable_ind: Optional[BL] = field(
         default=None,
         metadata={
             "name": "seperatableInd",
@@ -1959,7 +1959,7 @@ class Supply:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    independent_ind: Optional[Bl] = field(
+    independent_ind: Optional[BL] = field(
         default=None,
         metadata={
             "name": "independentInd",
@@ -1967,7 +1967,7 @@ class Supply:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    quantity: Optional[Pq] = field(
+    quantity: Optional[PQ] = field(
         default=None,
         metadata={
             "type": "Element",

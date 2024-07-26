@@ -2,13 +2,13 @@ from dataclasses import dataclass, field
 from typing import Optional
 
 from cdabindings.ivl_ts import IvlTs
-from cdabindings.pq import Pq
+from cdabindings.pq import PQ
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
 @dataclass
-class HxitPq(Pq):
+class HxitPq(PQ):
     """
     :ivar valid_time: The time interval during which the given
         information was, is, or is expected to be valid. The interval

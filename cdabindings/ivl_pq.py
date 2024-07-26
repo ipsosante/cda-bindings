@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from typing import Optional
 
 from cdabindings.ivxb_pq import IvxbPq
-from cdabindings.pq import Pq
+from cdabindings.pq import PQ
 from cdabindings.sxcm_pq import SxcmPq
 
 __NAMESPACE__ = "urn:hl7-org:v3"
@@ -34,7 +34,7 @@ class IvlPq(SxcmPq):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    width: list[Pq] = field(
+    width: list[PQ] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -50,7 +50,7 @@ class IvlPq(SxcmPq):
             "max_occurs": 3,
         },
     )
-    center: Optional[Pq] = field(
+    center: Optional[PQ] = field(
         default=None,
         metadata={
             "type": "Element",
