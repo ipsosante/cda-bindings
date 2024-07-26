@@ -27,6 +27,8 @@ for patch in ./patches/generated_code/*.patch; do
     patch -p1 < "$patch"
 done
 
+touch ./cdabindings/py.typed
+
 # Restore the content of the TestContenuCDA directory (reverse the patches)
 for patch in ./patches/xsd/*.patch; do
     patch -p1 -R -d "$root_cda_dir" < "$patch"
