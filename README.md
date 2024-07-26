@@ -62,3 +62,7 @@ I've seen no reason if the spec to limit the usage of `translation` at the `CE` 
 ### `patches/generated_code/cs_init.patch`
 
 This is related to the patch `patches/xsd/remove_cd_qualifier.patch`. To make the generated `CS` class initializable, we need to manually declare its initializer to work around most of its field being re-declared with `init=False`.
+
+### `patches/generated_code/patient.patch`
+
+Because we are removing the `PocdMt000040` prefix to all classes (using `<Substitution>` in `.xsdata.xml`), the generated code ends up with two `Patient` classes in the same module. We manually rename one of them to fix the resulting ambiguity.
