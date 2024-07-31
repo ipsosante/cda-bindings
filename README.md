@@ -38,6 +38,12 @@ This will regenerate the full bindings in `./cdabindings`.
 ## Validating the generated XML files with the XSD
 
 ```sh
+brew install java
+# Follow the brew instructions after installation, e.g.
+# sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+```
+
+```sh
 git clone https://github.com/amouat/xsd-validator
 cd xsd-validator
 ./xsdv.sh /path/to/ansforge/TestContenuCDA-3-0/infrastructure/cda/CDA_extended.xsd /path/to/generated/vsm_doc.xml
