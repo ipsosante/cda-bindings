@@ -24,7 +24,7 @@ from cdabindings.ts import TS
 
 
 @dataclass
-class _Patient(SdtcPatient):
+class HL7SDTCPatient(SdtcPatient):
     class Meta:
         name = "patient"
         namespace = "urn:hl7-org:sdtc"

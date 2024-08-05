@@ -92,7 +92,7 @@ class Criterion:
 
 
 @dataclass
-class Criterion:
+class LabCriterion:
     class Meta:
         target_namespace = "urn:oid:1.3.6.1.4.1.19376.1.3.2"
 

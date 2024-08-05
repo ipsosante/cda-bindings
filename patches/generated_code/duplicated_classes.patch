@@ -1,0 +1,84 @@
+diff --git a/cdabindings/clinical_document.py b/cdabindings/clinical_document.py
+index 47b4c7f..49327f1 100644
+--- a/cdabindings/clinical_document.py
++++ b/cdabindings/clinical_document.py
+@@ -32,7 +32,7 @@
+
+
+ @dataclass
+-class ClinicalDocument:
++class BaseClinicalDocument:
+     class Meta:
+         name = "POCD_MT000040.ClinicalDocument"
+
+@@ -285,6 +285,6 @@ class Meta:
+
+
+ @dataclass
+-class ClinicalDocument(ClinicalDocument):
++class ClinicalDocument(BaseClinicalDocument):
+     class Meta:
+         namespace = "urn:hl7-org:v3"
+diff --git a/cdabindings/criterion.py b/cdabindings/criterion.py
+index 963f8ea..2c6334c 100644
+--- a/cdabindings/criterion.py
++++ b/cdabindings/criterion.py
+@@ -92,7 +92,7 @@ class Meta:
+
+
+ @dataclass
+-class Criterion:
++class LabCriterion:
+     class Meta:
+         target_namespace = "urn:oid:1.3.6.1.4.1.19376.1.3.2"
+
+diff --git a/cdabindings/in_fulfillment_of.py b/cdabindings/in_fulfillment_of.py
+index 024f08c..462bb7b 100644
+--- a/cdabindings/in_fulfillment_of.py
++++ b/cdabindings/in_fulfillment_of.py
+@@ -11,7 +11,7 @@
+
+
+ @dataclass
+-class InFulfillmentOf(InFulfillmentOf2):
++class DicomInFulfillmentOf(InFulfillmentOf2):
+     class Meta:
+         name = "inFulfillmentOf"
+         namespace = "urn:dicom-org:ps3-20"
+diff --git a/cdabindings/patient.py b/cdabindings/patient.py
+index ea0f798..84f7fc2 100644
+--- a/cdabindings/patient.py
++++ b/cdabindings/patient.py
+@@ -24,7 +24,7 @@
+
+
+ @dataclass
+-class Patient(SdtcPatient):
++class HL7SDTCPatient(SdtcPatient):
+     class Meta:
+         name = "patient"
+         namespace = "urn:hl7-org:sdtc"
+diff --git a/cdabindings/precondition.py b/cdabindings/precondition.py
+index 0a88840..87f29fa 100644
+--- a/cdabindings/precondition.py
++++ b/cdabindings/precondition.py
+@@ -2,9 +2,7 @@
+ from typing import Optional
+
+ from cdabindings.act_relationship_type import ActRelationshipType
+-from cdabindings.criterion import (
+-    Criterion,
+-)
++from cdabindings.criterion import Criterion
+ from cdabindings.cs import CS
+ from cdabindings.ii import II
+ from cdabindings.infrastructure_root_type_id import InfrastructureRootTypeId
+@@ -68,7 +66,7 @@ class Meta:
+
+
+ @dataclass
+-class Precondition:
++class LabPrecondition:
+     class Meta:
+         name = "precondition"
+         namespace = "urn:oid:1.3.6.1.4.1.19376.1.3.2"

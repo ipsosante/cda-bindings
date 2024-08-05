@@ -11,7 +11,7 @@ from cdabindings.order_2 import Order2
 
 
 @dataclass
-class InFulfillmentOf(InFulfillmentOf2):
+class DicomInFulfillmentOf(InFulfillmentOf2):
     class Meta:
         name = "inFulfillmentOf"
         namespace = "urn:dicom-org:ps3-20"

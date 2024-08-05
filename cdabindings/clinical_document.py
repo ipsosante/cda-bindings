@@ -32,7 +32,7 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 
 @dataclass
-class ClinicalDocument:
+class BaseClinicalDocument:
     class Meta:
         name = "POCD_MT000040.ClinicalDocument"
 
@@ -285,6 +285,6 @@ class ClinicalDocument:
 
 
 @dataclass
-class ClinicalDocument(ClinicalDocument):
+class ClinicalDocument(BaseClinicalDocument):
     class Meta:
         namespace = "urn:hl7-org:v3"

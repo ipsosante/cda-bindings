@@ -2,9 +2,7 @@ from dataclasses import dataclass, field
 from typing import Optional
 
 from cdabindings.act_relationship_type import ActRelationshipType
-from cdabindings.criterion import (
-    Criterion,
-)
+from cdabindings.criterion import Criterion
 from cdabindings.cs import CS
 from cdabindings.ii import II
 from cdabindings.infrastructure_root_type_id import InfrastructureRootTypeId
@@ -68,7 +66,7 @@ class Precondition:
 
 
 @dataclass
-class Precondition:
+class LabPrecondition:
     class Meta:
         name = "precondition"
         namespace = "urn:oid:1.3.6.1.4.1.19376.1.3.2"
