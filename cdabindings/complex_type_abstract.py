@@ -8,7 +8,7 @@ from cdabindings.all_nni_value import AllNniValue
 from cdabindings.annotated import Annotated
 from cdabindings.any import AnyType
 from cdabindings.any_attribute import AnyAttribute
-from cdabindings.attribute_2 import Attribute2
+from cdabindings.attribute_1 import Attribute1
 from cdabindings.attribute_group_abstract import AttributeGroupRef
 from cdabindings.block_set import BlockSet
 from cdabindings.derivation_set import DerivationSet
@@ -100,7 +100,7 @@ class ComplexTypeAbstract(Annotated):
             "namespace": "http://www.w3.org/2001/XMLSchema",
         },
     )
-    attribute: list[Attribute2] = field(
+    attribute: list[Attribute1] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -162,30 +162,35 @@ class LocalComplexType(ComplexTypeAbstract):
 
     any_element: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     name: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     abstract: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     final: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     block: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -332,24 +337,28 @@ class LocalElement(Element1):
 
     any_element: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     substitution_group: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     final: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     abstract: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -446,24 +455,28 @@ class ExplicitGroup(GroupAbstract):
 
     all: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     any_element: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     name: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     ref: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -477,24 +490,28 @@ class RealGroup(GroupAbstract):
 
     element: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     group: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     any: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     any_element: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -513,36 +530,42 @@ class All(ExplicitGroup):
 
     all: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     any_element: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     group: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     choice: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     sequence: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     any: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -577,42 +600,49 @@ class GroupRef(RealGroup):
 
     element: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     group: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     any: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     any_element: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     all: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     choice: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     sequence: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -626,6 +656,7 @@ class GroupRef(RealGroup):
     )
     name: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -672,7 +703,7 @@ class ExtensionType(Annotated):
             "namespace": "http://www.w3.org/2001/XMLSchema",
         },
     )
-    attribute: list[Attribute2] = field(
+    attribute: list[Attribute1] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -838,7 +869,7 @@ class RestrictionType(Annotated):
             "namespace": "http://www.w3.org/2001/XMLSchema",
         },
     )
-    attribute: list[Attribute2] = field(
+    attribute: list[Attribute1] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -877,84 +908,98 @@ class ComplexRestrictionType(RestrictionType):
 
     simple_type: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     min_exclusive: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     min_inclusive: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     max_exclusive: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     max_inclusive: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     total_digits: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     fraction_digits: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     length: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     min_length: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     max_length: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     enumeration: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     white_space: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     pattern: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     any_element: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -968,30 +1013,35 @@ class SimpleExtensionType(ExtensionType):
 
     group: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     all: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     choice: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     sequence: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     any_element: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -1005,30 +1055,35 @@ class SimpleRestrictionType(RestrictionType):
 
     group: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     all: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     choice: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     sequence: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     any_element: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

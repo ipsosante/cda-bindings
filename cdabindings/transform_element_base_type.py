@@ -16,6 +16,7 @@ class TransformElementBaseType(ElementOnlyVersionedElementType):
 
     content: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

@@ -11,9 +11,9 @@ authors = [
 description = "Python bindings for the CDA R2 document format"
 readme = "README.md"
 license = { file = "LICENSE" }
-requires-python = ">=3.9"
+requires-python = "~=3.9.0"
 dependencies = [
-    "xsdata == 24.7",
+    "xsdata==25.7", # 26+ does not supports python 3.9
 ]
 
 [project.optional-dependencies]

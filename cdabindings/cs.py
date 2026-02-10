@@ -25,36 +25,42 @@ class CS(CV):
 
     original_text: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     translation: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     code_system: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     code_system_name: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     code_system_version: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     display_name: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

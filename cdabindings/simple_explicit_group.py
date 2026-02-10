@@ -13,24 +13,28 @@ class SimpleExplicitGroup(ExplicitGroup):
 
     all: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     any_element: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     min_occurs: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     max_occurs: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

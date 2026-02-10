@@ -505,7 +505,7 @@ from cdabindings.simple_derivation_set import SimpleDerivationSet
 from cdabindings.simple_explicit_group import SimpleExplicitGroup
 from cdabindings.simple_type import SimpleType
 from cdabindings.simple_type_abstract import (
-    ListType,
+    List,
     LocalSimpleType,
     Restriction,
     SimpleTypeAbstract,
@@ -1091,7 +1091,7 @@ __all__ = [
     "SimpleDerivationSet",
     "SimpleExplicitGroup",
     "SimpleType",
-    "ListType",
+    "List",
     "LocalSimpleType",
     "Restriction",
     "SimpleTypeAbstract",

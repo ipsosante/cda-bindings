@@ -4,7 +4,7 @@ from xml.etree.ElementTree import QName
 
 from cdabindings.annotated import Annotated
 from cdabindings.any_attribute import AnyAttribute
-from cdabindings.attribute_2 import Attribute2
+from cdabindings.attribute_1 import Attribute1
 
 __NAMESPACE__ = "http://www.w3.org/2001/XMLSchema"
 
@@ -14,7 +14,7 @@ class AttributeGroupAbstract(Annotated):
     class Meta:
         name = "attributeGroup"
 
-    attribute: list[Attribute2] = field(
+    attribute: list[Attribute1] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -58,24 +58,28 @@ class AttributeGroupRef(AttributeGroupAbstract):
 
     attribute: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     attribute_group: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     any_attribute: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     any_element: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -89,6 +93,7 @@ class AttributeGroupRef(AttributeGroupAbstract):
     )
     name: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

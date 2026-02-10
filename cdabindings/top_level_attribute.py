@@ -13,24 +13,28 @@ class TopLevelAttribute(Attribute1):
 
     any_element: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     ref: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     form: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     use: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

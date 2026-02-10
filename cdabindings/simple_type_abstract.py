@@ -40,7 +40,7 @@ class SimpleTypeAbstract(Annotated):
             "namespace": "http://www.w3.org/2001/XMLSchema",
         },
     )
-    list_value: Optional["ListType"] = field(
+    list_value: Optional["List"] = field(
         default=None,
         metadata={
             "name": "list",
@@ -82,18 +82,21 @@ class LocalSimpleType(SimpleTypeAbstract):
 
     any_element: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     name: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     final: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -101,7 +104,7 @@ class LocalSimpleType(SimpleTypeAbstract):
 
 
 @dataclass
-class ListType(Annotated):
+class List(Annotated):
     class Meta:
         name = "list"
         namespace = "http://www.w3.org/2001/XMLSchema"

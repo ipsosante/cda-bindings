@@ -25,12 +25,14 @@ class EivlEvent(CE):
 
     original_text: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     translation: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

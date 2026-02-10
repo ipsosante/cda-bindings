@@ -13,30 +13,35 @@ class TopLevelElement(Element1):
 
     any_element: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     ref: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     form: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     min_occurs: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     max_occurs: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

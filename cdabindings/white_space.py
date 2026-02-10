@@ -15,6 +15,7 @@ class WhiteSpace(Facet):
 
     any_element: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

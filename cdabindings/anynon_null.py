@@ -19,6 +19,7 @@ class AnynonNull(AnyAbstract):
 
     null_flavor: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

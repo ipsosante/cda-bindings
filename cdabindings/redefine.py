@@ -2,11 +2,13 @@ from dataclasses import dataclass, field
 from typing import Optional
 
 from cdabindings.annotation import Annotation
-from cdabindings.attribute_group import AttributeGroup
-from cdabindings.complex_type import ComplexType
-from cdabindings.group import Group
+from cdabindings.attribute_group_abstract import AttributeGroupAbstract
+from cdabindings.complex_type_abstract import (
+    ComplexTypeAbstract,
+    GroupAbstract,
+)
 from cdabindings.open_attrs import OpenAttrs
-from cdabindings.simple_type import SimpleType
+from cdabindings.simple_type_abstract import SimpleTypeAbstract
 
 __NAMESPACE__ = "http://www.w3.org/2001/XMLSchema"
 
@@ -23,27 +25,27 @@ class Redefine(OpenAttrs):
             "type": "Element",
         },
     )
-    simple_type: list[SimpleType] = field(
+    simple_type: list[SimpleTypeAbstract] = field(
         default_factory=list,
         metadata={
             "name": "simpleType",
             "type": "Element",
         },
     )
-    complex_type: list[ComplexType] = field(
+    complex_type: list[ComplexTypeAbstract] = field(
         default_factory=list,
         metadata={
             "name": "complexType",
             "type": "Element",
         },
     )
-    group: list[Group] = field(
+    group: list[GroupAbstract] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    attribute_group: list[AttributeGroup] = field(
+    attribute_group: list[AttributeGroupAbstract] = field(
         default_factory=list,
         metadata={
             "name": "attributeGroup",

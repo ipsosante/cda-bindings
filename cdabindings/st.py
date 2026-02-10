@@ -35,18 +35,21 @@ class ST(ED):
     )
     compression: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     integrity_check: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     integrity_check_algorithm: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

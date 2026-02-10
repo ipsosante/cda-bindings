@@ -17,24 +17,28 @@ class NamedGroup(RealGroup):
 
     element: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     group: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     any: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     any_element: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -69,18 +73,21 @@ class NamedGroup(RealGroup):
     )
     ref: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     min_occurs: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     max_occurs: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -90,48 +97,56 @@ class NamedGroup(RealGroup):
     class All(All):
         all: Any = field(
             init=False,
+            default=None,
             metadata={
                 "type": "Ignore",
             },
         )
         any_element: Any = field(
             init=False,
+            default=None,
             metadata={
                 "type": "Ignore",
             },
         )
         group: Any = field(
             init=False,
+            default=None,
             metadata={
                 "type": "Ignore",
             },
         )
         choice: Any = field(
             init=False,
+            default=None,
             metadata={
                 "type": "Ignore",
             },
         )
         sequence: Any = field(
             init=False,
+            default=None,
             metadata={
                 "type": "Ignore",
             },
         )
         any: Any = field(
             init=False,
+            default=None,
             metadata={
                 "type": "Ignore",
             },
         )
         min_occurs: Any = field(
             init=False,
+            default=None,
             metadata={
                 "type": "Ignore",
             },
         )
         max_occurs: Any = field(
             init=False,
+            default=None,
             metadata={
                 "type": "Ignore",
             },

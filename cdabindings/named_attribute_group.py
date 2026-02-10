@@ -13,6 +13,7 @@ class NamedAttributeGroup(AttributeGroupAbstract):
 
     any_element: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -26,6 +27,7 @@ class NamedAttributeGroup(AttributeGroupAbstract):
     )
     ref: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

@@ -14,23 +14,24 @@ git+https://github.com/ipsosante/cda-bindings.git
 
 ## Re-generating the bindings
 
+This guide assumes that your are familiar with [`uv`](https://docs.astral.sh/uv/).
+
 Start by creating a Python virtualenv, and install the dependencies:
 
-
 ```
-pip install .[cli]
+uv sync --extra cli
 ```
 
-Then you'll need to clone [https://github.com/ansforge/TestContenuCDA-3-0](https://github.com/ansforge/TestContenuCDA-3-0) somewhere.
+Then you'll need to clone [https://github.com/ansforge/interop-outil-cda-testcontenucda3.0-outil-validation-documents-cda](https://github.com/ansforge/interop-outil-cda-testcontenucda3.0-outil-validation-documents-cda) somewhere.
 
 ```sh
-git clone https://github.com/ansforge/TestContenuCDA-3-0.git
+git clone https://github.com/ansforge/interop-outil-cda-testcontenucda3.0-outil-validation-documents-cda.git
 ```
 
 Come back to the `cda-bindings` directory, then run :
 
 ```sh
-./regen.sh /path/to/ansforge/TestContenuCDA-3-0
+./regen.sh /path/to/ansforge/interop-outil-cda-testcontenucda3.0-outil-validation-documents-cda.git
 ```
 
 This will regenerate the full bindings in `./cdabindings`.

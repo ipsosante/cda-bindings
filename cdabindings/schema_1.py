@@ -2,19 +2,21 @@ from dataclasses import dataclass, field
 from typing import Optional, Union
 
 from cdabindings.annotation import Annotation
-from cdabindings.attribute_2 import Attribute2
-from cdabindings.attribute_group import AttributeGroup
-from cdabindings.complex_type import ComplexType
-from cdabindings.element_2 import Element2
+from cdabindings.attribute_1 import Attribute1
+from cdabindings.attribute_group_abstract import AttributeGroupAbstract
+from cdabindings.complex_type_abstract import (
+    ComplexTypeAbstract,
+    Element1,
+    GroupAbstract,
+)
 from cdabindings.form_choice import FormChoice
-from cdabindings.group import Group
 from cdabindings.import_1 import Import1
 from cdabindings.include_1 import Include1
 from cdabindings.lang_value import LangValue
 from cdabindings.notation import Notation
 from cdabindings.open_attrs import OpenAttrs
 from cdabindings.redefine import Redefine
-from cdabindings.simple_type import SimpleType
+from cdabindings.simple_type_abstract import SimpleTypeAbstract
 
 __NAMESPACE__ = "http://www.w3.org/2001/XMLSchema"
 
@@ -50,40 +52,40 @@ class Schema1(OpenAttrs):
             "type": "Element",
         },
     )
-    simple_type: list[SimpleType] = field(
+    simple_type: list[SimpleTypeAbstract] = field(
         default_factory=list,
         metadata={
             "name": "simpleType",
             "type": "Element",
         },
     )
-    complex_type: list[ComplexType] = field(
+    complex_type: list[ComplexTypeAbstract] = field(
         default_factory=list,
         metadata={
             "name": "complexType",
             "type": "Element",
         },
     )
-    group: list[Group] = field(
+    group: list[GroupAbstract] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    attribute_group: list[AttributeGroup] = field(
+    attribute_group: list[AttributeGroupAbstract] = field(
         default_factory=list,
         metadata={
             "name": "attributeGroup",
             "type": "Element",
         },
     )
-    element: list[Element2] = field(
+    element: list[Element1] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    attribute: list[Attribute2] = field(
+    attribute: list[Attribute1] = field(
         default_factory=list,
         metadata={
             "type": "Element",

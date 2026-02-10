@@ -13,12 +13,14 @@ class NoFixedFacet(Facet):
 
     any_element: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     fixed: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
